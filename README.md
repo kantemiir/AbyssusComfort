@@ -40,7 +40,8 @@
 Мод (UE4SS, Lua) раз в секунду находит анимацию рук игрока и меняет прозрачность (`Alpha`/`AlphaScaleBias`) нескольких узлов её графа: кость оружия `ik_hand_gun` (наклон и отдача) и слой аддитивной анимации бега. Положения камеры, регистрация попаданий и урон не затрагиваются.
 
 - ✅ Проверено автором: `ArmsLean` (A/D) — тряска ушла.
-- ⏳ Включено в v0.5, ждёт подтверждения: `ArmsRunBob` (прыжок), `WeaponRecoilVisual`/`ArmsFireAnim`, `ArmsSway`, влияние `ViewmodelFOV` на отрисовку.
+- ⚠️ **Тряска в прыжке:** по отзыву автора после v0.5 она **сохраняется**. Анимация бега у рук в воздухе гасится (`ArmsRunBob`), но этого недостаточно, причина ещё выясняется, исправление планируется в следующей версии.
+- ⏳ Включено, но пока не проверено: `WeaponRecoilVisual`/`ArmsFireAnim` (отдача), `ArmsSway` (мышь), влияние `ViewmodelFOV` на отрисовку.
 - Проверялся персонаж *Ricky*. Остальные персонажи, судя по базовому классу, должны вести себя так же, но это не подтверждено.
 - После обновления игры названия узлов могут измениться. В этом случае мод молча перестанет действовать (ошибок и вылетов он не вызывает, в `UE4SS.log` будут записи).
 
@@ -91,7 +92,8 @@ MIT, см. [LICENSE](LICENSE). UE4SS — отдельный проект (MIT) �
 ### Status
 
 - ✅ Verified by the author: `ArmsLean` (A/D shaking is gone).
-- ⏳ Shipped in v0.5, awaiting confirmation: `ArmsRunBob` (jumping), `WeaponRecoilVisual`/`ArmsFireAnim`, `ArmsSway`, effect of `ViewmodelFOV`.
+- ⚠️ **Jump shaking:** per the author's testing it is **still present** after v0.5. The arms run animation in the air is suppressed (`ArmsRunBob`) but that is not enough; the cause is still being investigated and a fix is planned for the next version.
+- ⏳ Shipped but not yet verified: `WeaponRecoilVisual`/`ArmsFireAnim` (recoil), `ArmsSway` (mouse), effect of `ViewmodelFOV`.
 - Tested with the *Ricky* character only. After a game update the node names may change; the mod then simply stops having an effect (it logs to `UE4SS.log` instead of crashing).
 
 ### License
